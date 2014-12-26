@@ -1,0 +1,5 @@
+<ScalaCheckSpec-stats timestamp="1408423635602"><stats time="20" expectations="10" successes="1" examples="1"></stats></ScalaCheckSpec-stats>
+<ScalaCheckSpec-results timestamp="1408423747807"><result location="ScalaCheckSpec (ScalaCheckSpec.scala:26)" id="1589016072"><stats time="150" expectations="1" failures="1" examples="1"></stats></result>
+</ScalaCheckSpec-results>
+<ScalaCheckSpec-stats timestamp="1408423747819"><stats time="15" expectations="11" failures="1" successes="1" examples="2"><trend><stats time="15" expectations="1" failures="1" examples="1"></stats></trend></stats></ScalaCheckSpec-stats>
+<ScalaCheckSpec-stats timestamp="1408432096455"><stats time="23" expectations="10" successes="1" examples="1"><trend><stats time="23" expectations="-1" failures="-1" examples="-1"></stats></trend></stats></ScalaCheckSpec-stats>

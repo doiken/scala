@@ -1,0 +1,46 @@
+apply plugin: 'java'
+apply plugin: 'scala'
+
+repositories {
+    mavenCentral()
+}
+
+
+ext {
+    scalaVersion = '2.11'
+    scalaVersionRevision = '0'
+    scalazVersion = '7.1.0'
+    specs2Version = '2.3.11'
+    sprayVersion = '1.3.1'
+    mockitoVersion = '1.9.5'
+    junitVersion = '4.11'
+    scalaCheckVersion = '1.11.5'
+}
+
+dependencies{
+    compile "org.scala-lang:scala-library:$scalaVersion.$scalaVersionRevision"
+    compile "org.scalaz:scalaz-core_$scalaVersion:$scalazVersion"
+    compile "org.scalaz:scalaz-concurrent_$scalaVersion:$scalazVersion"
+
+    compile "io.spray:spray-can_$scalaVersion:$sprayVersion"
+    compile "io.spray:spray-routing_$scalaVersion:$sprayVersion"
+    compile "io.spray:spray-testkit_$scalaVersion:$sprayVersion"
+    compile "org.scalacheck:scalacheck_$scalaVersion:$scalaCheckVersion"
+    compile "org.scala-lang:scala-reflect:$scalaVersion.$scalaVersionRevision"
+    compile 'org.apache.commons:commons-lang3:3.3.2'
+    compile 'commons-codec:commons-codec:1.10'
+
+
+    testCompile "junit:junit:$junitVersion"
+    testCompile "org.mockito:mockito-core:$mockitoVersion"
+    testCompile "org.specs2:specs2_$scalaVersion:$specs2Version"
+}
+
+task initProjectDirs() {
+    new File('src/main/scala').mkdirs()
+    new File('src/main/java').mkdirs()
+    new File('src/main/resources').mkdirs()
+    new File('src/test/scala').mkdirs()
+    new File('src/test/java').mkdirs()
+    new File('src/test/resources').mkdirs()
+}

@@ -1,0 +1,62 @@
+// Decompiled by Jad v1.5.8g. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.kpdus.com/jad.html
+// Decompiler options: packimports(3) 
+// Source File Name:   Test.scala
+
+import scala.*;
+import scala.runtime.BoxedUnit;
+
+public final class Test$
+{
+
+    public void main(String args[])
+    {
+        String s;
+label0:
+        {
+label1:
+            {
+                String str = "hoge";
+                Predef$.MODULE$.println(foo(str));
+                s = foo(str);
+                if(s != null)
+                {
+                    String s1 = s;
+                    if(s1.length() > 0)
+                    {
+                        Predef$.MODULE$.println(s1);
+                        BoxedUnit boxedunit = BoxedUnit.UNIT;
+                        break label1;
+                    }
+                }
+                if(s == null)
+                    break label0;
+                String s2 = s;
+                Predef$.MODULE$.println(s2);
+                BoxedUnit boxedunit1 = BoxedUnit.UNIT;
+            }
+            return;
+        }
+        throw new MatchError(s);
+    }
+
+    public String foo(String str)
+    {
+        return (new StringContext(Predef$.MODULE$.wrapRefArray((Object[])(new String[] {
+            "STRING IS ", ""
+        })))).s(Predef$.MODULE$.genericWrapArray(((Object) (new Object[] {
+            str
+        }))));
+    }
+
+    private Test$()
+    {
+    }
+
+    public static final Test$ MODULE$ = this;
+
+    static 
+    {
+        new Test$();
+    }
+}
